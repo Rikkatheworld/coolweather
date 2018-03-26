@@ -7,11 +7,21 @@
     tools:context="com.example.msi.coolweather.WeatherActivity"
     android:background="@color/colorPrimary">
 
-    <ImageView
-        android:id="@+id/bing_pic_img"
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/bing_pic_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop" />
+        android:layout_height="match_parent">
+
 
     <ScrollView
         android:id="@+id/weather_layout"
@@ -33,5 +43,13 @@
         </LinearLayout>
     </ScrollView>
 
+    </android.support.v4.widget.SwipeRefreshLayout>
 
+        <fragment
+            android:id="@+id/choose_area_fragment"
+            android:name="com.example.msi.coolweather.ChooseAreaFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"></fragment>
+    </android.support.v4.widget.DrawerLayout>
 </FrameLayout>
