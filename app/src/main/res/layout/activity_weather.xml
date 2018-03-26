@@ -7,6 +7,12 @@
     tools:context="com.example.msi.coolweather.WeatherActivity"
     android:background="@color/colorPrimary">
 
+    <ImageView
+        android:id="@+id/bing_pic_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
     <ScrollView
         android:id="@+id/weather_layout"
         android:layout_width="fill_parent"
@@ -17,7 +23,8 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
             <include layout="@layout/title"></include>
             <include layout="@layout/now"></include>
             <include layout="@layout/forecast"></include>
@@ -25,5 +32,6 @@
             <include layout="@layout/suggestion"></include>
         </LinearLayout>
     </ScrollView>
+
 
 </FrameLayout>
